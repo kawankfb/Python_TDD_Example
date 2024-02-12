@@ -13,7 +13,12 @@ class Calculator:
         return self.__memory[len(self.__memory)-1]
 
     def add(self, first_value, second_value):
-        pass
+        if  not (isinstance(first_value,int) or isinstance(first_value,float)):
+            first_value = int(first_value)
+        if  not (isinstance(second_value,int) or isinstance(second_value,float)):
+            second_value = int(second_value)
+        result = first_value + second_value
+        return result
 
     def sub(self, first_value, second_value):
         pass

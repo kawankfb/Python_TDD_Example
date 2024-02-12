@@ -25,16 +25,20 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calculator.read_from_memory(), 5)
 
     def test_calculator_can_add_two_numbers(self):
-        self.fail("Not Tested yet")
+        result = self.calculator.add(5,8.13)
+        self.assertEqual(13.13,result)
 
     def test_calculator_can_add_two_strings(self):
-        self.fail("Not Tested yet")
+        result = self.calculator.add("54","12")
+        self.assertEqual(result,66)
 
     def test_calculator_can_add_string_to_numbers(self):
-        self.fail("Not Tested yet")
+        result = self.calculator.add("54", 12)
+        self.assertEqual(result, 66)
 
     def test_calculator_can_add_two_integers(self):
-        self.fail("Not Tested yet")
+        result = self.calculator.add(54, 12)
+        self.assertEqual(result, 66)
 
 
 if __name__ == "__main__":
